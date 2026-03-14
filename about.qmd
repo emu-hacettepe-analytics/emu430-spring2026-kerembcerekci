@@ -3,28 +3,50 @@ title: "About Me"
 sidebar: false 
 ---
 
-# Education
+# 
 
--   B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+---
+title: "About Me"
+---
 
-# Work Experience
+## Education
 
-## Employements
+-   B.S., Industrial Engineering, Hacettepe University, Turkey, 2020 - 2026.
 
-1.  Firm xxx, position xx, year xxx
+## Work Experience
 
-2.  Firm yyy, position yyy, year yyy
+### Internships
 
-## Internships
+1.  **ASCENDUM** **\| Service Intern \| May 2025 - October 2025 \| ANKARA**
+    -   Tracking of machine, oil sample, and component data; providing a data stream integrated with production for maintenance planning and predictive analysis.
+    -   Analysis of machine data; machine updates, maintenance, and parts management.
+    -   Review of product trees and component structures; parts support for maintenance operations.
+    -   Coordination of technician scheduling and overtime management
+2.  **AYESAŞ** **\| Production Planning and Control Intern \| August 2024 - September 2024 \| ANKARA**
+    -   Analysis of process analysis and improvement methods; proposed solutions to issues affecting production quality.
+    -   Order-driven work study planning and lean manufacturing practices.
+    -   Optimization of bottlenecks through overtime scheduling
 
-1.  Firm aaa, position xx, year xxx
+## Projects
 
-2.  Firm bbb, position yyy, year yyy
+1.  **TOC & DES Based Simulation Model \| MITAS GROUP \| October 2025 – February 2025 \| ANKARA**
+    -   A term-end project aimed at developing a TOC- and DES-based simulation model to perform production line capacity analysis, identify the primary bottleneck, and generate improvement alternatives for capacity expansion through scenario analysis.
+2.  **Rough Cut Capacity Analysis** **\| PETLAS \| February 2025 – July 2025 \| KIRŞEHİR**
+    -   Rough Capacity Planning (RCCP) for Tire Types: A Term Project.
+    -   Capacity planning analysis and development of an Excel macro-based algorithm to improve
+3.  **Database Management Systems \| HACETTEPE UNIVERSITY \| February 2025 – July 2025 \| ANKARA**
+    -   A MySQL database project that enhances the planning efficiency of academic staff by preventing exam schedule conflicts.
+4.  **Reduction In Lost Shipments \| ARAS KARGO \| September 2024 – January 2024** **\| ANKARA**
+    -   A lean manufacturing project aimed at reducing lost shipments and improving warehouse efficiency.
+5.  **Arat \| TALAY ROBOTICS SYSTEMS \| November 2020 – January 2021** **\| ANKARA**
+    -   Teknofest Preliminary Design Report (15th), Critical Design Report (5th).
 
-# Projects
+## Competencies
 
-# Competencies
+R, Quarto, Git, Python, SAP, MySQL, Excel-VBA
 
-R, Quarto, Git, Python
+## Hobbies
 
-# Hobbies
+-   Boxing
+-   Tennis
+-   Riding
