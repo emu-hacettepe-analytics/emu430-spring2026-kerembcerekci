@@ -18,11 +18,19 @@ Baykal Hafızoğlu completed his bachelor’s and master’s degrees at METU in 
 
 Mr. Baykal currently serves as Director of Platform Management at FICO in the U.S.
 
-Hafızoğlu discusses four categories within the analytical field: -Descriptive, -Diagnostic -Predictive -Prescriptive analytics.
+Hafızoğlu discusses four categories within the analytical field:
+
+-Descriptive,
+
+-Diagnostic
+
+-Predictive
+
+-Prescriptive analytics.
 
 He notes that an industrial engineering education already covers these four areas and therefore emphasizes the value of the curriculum’s content. He points out that many data science master’s programs actually cover material that industrial engineering students have already learned.
 
-One of his strongest arguments relates to implementation: He argues that an analytical model has no real value if it is not delivered to end users. In one of his projects at Procter & Gamble, he developed a “Product Life Cycle Management” application containing 50,000 lines of code; however, he notes that only 100 of those lines actually comprised the optimization model. The remaining code handled data processing, the user interface, and software engineering tasks. This demonstrates that making a model usable is just as important as creating it.
+One of his strongest arguments relates to implementation: He argues that an analytical model has no real value if it is not delivered to end users. In one of his projects at Procter & Gamble, he developed a **“Product Life Cycle Management”** application containing 50,000 lines of code; however, he notes that only 100 of those lines actually comprised the optimization model. The remaining code handled data processing, the user interface, and software engineering tasks. This demonstrates that making a model usable is just as important as creating it.
 
 ## (b)
 
@@ -32,21 +40,21 @@ One of his strongest arguments relates to implementation: He argues that an anal
 
     **Answer:**
 
-    Without a clear and measurable problem definition, project teams risk losing their direction and failing to communicate effectively with stakeholders. All parties involved in the process must be able to express their communication using measurable metrics (KPIs) rather than vague statements. Without this foundation, even the most advanced analytical model becomes meaningless because success cannot be measured.
+    Without a clear and measurable problem definition, project teams risk losing their direction and failing to communicate effectively with stakeholders. All parties involved in the process must be able to express their communication using measurable metrics (**KPI's**) rather than vague statements. Without this foundation, even the most advanced analytical model becomes meaningless because success cannot be measured.
 
-    Additionally, defining success criteria in advance enables teams to objectively evaluate their solutions and demonstrate the solution’s value to decision-makers. Furthermore, tracking conflicting KPIs is equally important, as improving one metric may inadvertently worsen another.
+    Additionally, defining success criteria in advance enables teams to objectively evaluate their solutions and demonstrate the solution’s value to decision-makers. Furthermore, tracking conflicting KPI's is equally important, as improving one metric may inadvertently worsen another.
 
 2.  **Multiple-choice Question:**
 
     Which of the following best describes prescriptive analytics?
 
-    A\) Summarizing and visualizing historical data to understand what happened.
+    **A)** Summarizing and visualizing historical data to understand what happened.
 
-    B\) Identifying the root causes of a problem that has already occurred.
+    **B)** Identifying the root causes of a problem that has already occurred.
 
-    C\) Predicting future outcomes using statistical and machine learning models.
+    **C)** Predicting future outcomes using statistical and machine learning models.
 
-    D\) Recommending specific actions to take in order to achieve a desired outcome.
+    **D)** Recommending specific actions to take in order to achieve a desired outcome.
 
     **Answer:**
 
