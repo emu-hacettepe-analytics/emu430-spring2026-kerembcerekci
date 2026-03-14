@@ -50,3 +50,7 @@ R, Quarto, Git, Python, SAP, MySQL, Excel-VBA
 -   Boxing
 -   Tennis
 -   Riding
+
+## CV
+
+[Click here to view my CV](cv.pdf)
