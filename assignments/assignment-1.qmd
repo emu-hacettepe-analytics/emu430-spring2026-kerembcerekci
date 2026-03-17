@@ -107,3 +107,4 @@ if (k %% 2 == 0) {
 sum(is.na(new_data))
 anyNA(new_data)
 ```
+
