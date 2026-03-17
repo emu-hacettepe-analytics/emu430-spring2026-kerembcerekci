@@ -7,5 +7,4 @@ Hello! My name is Kerem Berkalp Çerekçi.
 
 This is my personal webpage.
 
-I am a student at Hacettepe University.
-This is my personal webpage for EMU430.
+I am a student at Hacettepe University. This is my personal webpage for EMU430.
