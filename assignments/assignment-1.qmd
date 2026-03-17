@@ -62,10 +62,6 @@ One of his strongest arguments relates to implementation: He argues that an anal
 <<<<<<< HEAD
 
 ```{r}
-=======
-    
-        ```{r}
->>>>>>> f178cb6d0330957043146262aa73227edc1c9159
 library(dslabs)
 data <- polls_us_election_2016
 
@@ -74,35 +70,25 @@ my_birth_year <- 2000
 
 k <- (nchar(my_first) + my_birth_year) %% 15 + 8
 k
-<<<<<<< HEAD
-
 ```
 
+
 ```{r}
-=======
->>>>>>> f178cb6d0330957043146262aa73227edc1c9159
 if (k %% 2 == 0) {
   head(data, k)
 } else {
   tail(data, k)
 }
-<<<<<<< HEAD
 ```
 
 ```{r}
-=======
->>>>>>> f178cb6d0330957043146262aa73227edc1c9159
 sum(is.na(data))
 
 na_counts <- sort(colSums(is.na(data)), decreasing = TRUE)
 head(na_counts, 8)
-<<<<<<< HEAD
 ```
 
 ```{r}
-=======
-
->>>>>>> f178cb6d0330957043146262aa73227edc1c9159
 # The section where I used AI assistance
 new_data <- data
 
@@ -123,23 +109,15 @@ for (col in names(new_data)) {
 }
 
 #[How can I impute missing values in a dataset in R using `my_birth_year + k` for numeric columns and `Kerem_18` for text columns?]
-<<<<<<< HEAD
 ```
 
 ```{r}
-=======
->>>>>>> f178cb6d0330957043146262aa73227edc1c9159
 if (k %% 2 == 0) {
   head(new_data, k) 
 } else {
   tail(new_data, k) 
 }
 sum(is.na(new_data))
-<<<<<<< HEAD
 anyNA(new_data) 
 ```
-=======
-anyNA(new_data)
-```
 
->>>>>>> f178cb6d0330957043146262aa73227edc1c9159

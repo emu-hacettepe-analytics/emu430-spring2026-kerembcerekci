@@ -28,6 +28,14 @@ if (k %% 2 == 0) {
 ```
 
 ```{r}
+if (k %% 2 == 0) {
+  head(data, k)
+} else {
+  tail(data, k)
+}
+```
+
+```{r}
 sum(is.na(data))
 
 na_counts <- sort(colSums(is.na(data)), decreasing = TRUE)
