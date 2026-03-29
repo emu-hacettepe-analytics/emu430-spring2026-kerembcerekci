@@ -1,17 +1,23 @@
 [
   {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Our Course Project",
+    "objectID": "assignments/assignment-3.html",
+    "href": "assignments/assignment-3.html",
+    "title": "Assignment 3",
     "section": "",
-    "text": "I’m honored to be a member of the [group name] project team.\nBelow, you’ll find a brief summary of our project. To access a detailed project description, please go to https://[your-project-url].\nSummary\n[provide a biref summary of your project]\n\n\n\n Back to top"
+    "text": "Bu grafik, Hacettepe Üniversitesi’ndeki yaklaşık 50,000 öğrencinin gün içinde ring (servis) kullanım sıklığını göstermektedir. 24 saat dilimi boyunca toplam 24 sefer üzerinden analiz edilmiştir.\n\n# Hacettepe Ring Kullanım Sıklığı Pareto Grafiği\nlibrary(ggplot2)\n\nset.seed(42)\n\nhours &lt;- 0:23\n\nbase_prob &lt;- c(0.01, 0.01, 0.01, 0.01, 0.02, 0.05, 0.15, 0.35, 0.55, \n               0.30, 0.20, 0.50, 0.60, 0.35, 0.20, 0.15, 0.45, 0.55, \n               0.40, 0.25, 0.15, 0.08, 0.03, 0.02)\n\nusage_count &lt;- round(50000 * base_prob)\n\ndata &lt;- data.frame(\n  saat = paste0(hours, \":00\"),\n  kullanim_sayisi = usage_count\n)\n\ndata$cumulative &lt;- cumsum(data$kullanim_sayisi)\ndata$cumulative_pct &lt;- data$cumulative / max(data$cumulative) * 100\n\nggplot(data, aes(x = reorder(saat, -kullanim_sayisi))) +\n  geom_bar(aes(y = kullanim_sayisi), stat = \"identity\", fill = \"steelblue\") +\n  geom_line(aes(y = cumulative_pct * max(data$kullanim_sayisi) / 100), \n            group = 1, color = \"red\", linewidth = 1.2, na.rm = TRUE) +\n  geom_point(aes(y = cumulative_pct * max(data$kullanim_sayisi) / 100), \n             color = \"red\", size = 2, na.rm = TRUE) +\n  scale_y_continuous(name = \"Kullanım Sayısı\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(\n    x = \"Saat\",\n    title = \"Hacettepe Üniversitesi Ring Kullanım Sıklığı (Pareto Grafiği)\",\n    subtitle = \"Öğrenci Sayısı: 50,000 | Toplam Sefer: 24\"\n  )\n\nWarning: Use of `data$kullanim_sayisi` is discouraged.\nℹ Use `kullanim_sayisi` instead.\nUse of `data$kullanim_sayisi` is discouraged.\nℹ Use `kullanim_sayisi` instead.",
+    "crumbs": [
+      "Assignment 3"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Kerem Berkalp Çerekçi",
+    "objectID": "assignments/assignment-3.html#hacettepe-üniversitesi-öğrencilerinin-gün-içinde-ring-kullanım-sıklığı",
+    "href": "assignments/assignment-3.html#hacettepe-üniversitesi-öğrencilerinin-gün-içinde-ring-kullanım-sıklığı",
+    "title": "Assignment 3",
     "section": "",
-    "text": "Hello! My name is Kerem Berkalp Çerekçi.\nThis is my personal webpage.\nI am a student at Hacettepe University. This is my personal webpage for EMU430.\n\n\n\n Back to top"
+    "text": "Bu grafik, Hacettepe Üniversitesi’ndeki yaklaşık 50,000 öğrencinin gün içinde ring (servis) kullanım sıklığını göstermektedir. 24 saat dilimi boyunca toplam 24 sefer üzerinden analiz edilmiştir.\n\n# Hacettepe Ring Kullanım Sıklığı Pareto Grafiği\nlibrary(ggplot2)\n\nset.seed(42)\n\nhours &lt;- 0:23\n\nbase_prob &lt;- c(0.01, 0.01, 0.01, 0.01, 0.02, 0.05, 0.15, 0.35, 0.55, \n               0.30, 0.20, 0.50, 0.60, 0.35, 0.20, 0.15, 0.45, 0.55, \n               0.40, 0.25, 0.15, 0.08, 0.03, 0.02)\n\nusage_count &lt;- round(50000 * base_prob)\n\ndata &lt;- data.frame(\n  saat = paste0(hours, \":00\"),\n  kullanim_sayisi = usage_count\n)\n\ndata$cumulative &lt;- cumsum(data$kullanim_sayisi)\ndata$cumulative_pct &lt;- data$cumulative / max(data$cumulative) * 100\n\nggplot(data, aes(x = reorder(saat, -kullanim_sayisi))) +\n  geom_bar(aes(y = kullanim_sayisi), stat = \"identity\", fill = \"steelblue\") +\n  geom_line(aes(y = cumulative_pct * max(data$kullanim_sayisi) / 100), \n            group = 1, color = \"red\", linewidth = 1.2, na.rm = TRUE) +\n  geom_point(aes(y = cumulative_pct * max(data$kullanim_sayisi) / 100), \n             color = \"red\", size = 2, na.rm = TRUE) +\n  scale_y_continuous(name = \"Kullanım Sayısı\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(\n    x = \"Saat\",\n    title = \"Hacettepe Üniversitesi Ring Kullanım Sıklığı (Pareto Grafiği)\",\n    subtitle = \"Öğrenci Sayısı: 50,000 | Toplam Sefer: 24\"\n  )\n\nWarning: Use of `data$kullanim_sayisi` is discouraged.\nℹ Use `kullanim_sayisi` instead.\nUse of `data$kullanim_sayisi` is discouraged.\nℹ Use `kullanim_sayisi` instead.",
+    "crumbs": [
+      "Assignment 3"
+    ]
   },
   {
     "objectID": "assignments/assignment-2.html",
@@ -24,53 +30,21 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Our Course Project",
     "section": "",
-    "text": "B.S., Industrial Engineering, Hacettepe University, Turkey, 2020 - 2026.\n\n\n\n\n\n\n\nASCENDUM | Service Intern | May 2025 - October 2025 | ANKARA\n\nTracking of machine, oil sample, and component data; providing a data stream integrated with production for maintenance planning and predictive analysis.\nAnalysis of machine data; machine updates, maintenance, and parts management.\nReview of product trees and component structures; parts support for maintenance operations.\nCoordination of technician scheduling and overtime management\n\nAYESAŞ | Production Planning and Control Intern | August 2024 - September 2024 | ANKARA\n\nAnalysis of process analysis and improvement methods; proposed solutions to issues affecting production quality.\nOrder-driven work study planning and lean manufacturing practices.\nOptimization of bottlenecks through overtime scheduling\n\n\n\n\n\n\n\nTOC & DES Based Simulation Model | MITAS GROUP | October 2025 – February 2025 | ANKARA\n\nA term-end project aimed at developing a TOC- and DES-based simulation model to perform production line capacity analysis, identify the primary bottleneck, and generate improvement alternatives for capacity expansion through scenario analysis.\n\nRough Cut Capacity Analysis | PETLAS | February 2025 – July 2025 | KIRŞEHİR\n\nRough Capacity Planning (RCCP) for Tire Types: A Term Project.\nCapacity planning analysis and development of an Excel macro-based algorithm to improve\n\nDatabase Management Systems | HACETTEPE UNIVERSITY | February 2025 – July 2025 | ANKARA\n\nA MySQL database project that enhances the planning efficiency of academic staff by preventing exam schedule conflicts.\n\nReduction In Lost Shipments | ARAS KARGO | September 2024 – January 2024 | ANKARA\n\nA lean manufacturing project aimed at reducing lost shipments and improving warehouse efficiency.\n\nArat | TALAY ROBOTICS SYSTEMS | November 2020 – January 2021 | ANKARA\n\nTeknofest Preliminary Design Report (15th), Critical Design Report (5th).\n\n\n\n\n\nR, Quarto, Git, Python, SAP, MySQL, Excel-VBA\n\n\n\n\nBoxing\nTennis\nRiding\n\n\n\n\nClick here to view my CV"
+    "text": "I’m honored to be a member of the [group name] project team.\nBelow, you’ll find a brief summary of our project. To access a detailed project description, please go to https://[your-project-url].\nSummary\n[provide a biref summary of your project]\n\n\n\n Back to top"
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About Me",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "My Assignments",
     "section": "",
-    "text": "B.S., Industrial Engineering, Hacettepe University, Turkey, 2020 - 2026."
-  },
-  {
-    "objectID": "about.html#work-experience",
-    "href": "about.html#work-experience",
-    "title": "About Me",
-    "section": "",
-    "text": "ASCENDUM | Service Intern | May 2025 - October 2025 | ANKARA\n\nTracking of machine, oil sample, and component data; providing a data stream integrated with production for maintenance planning and predictive analysis.\nAnalysis of machine data; machine updates, maintenance, and parts management.\nReview of product trees and component structures; parts support for maintenance operations.\nCoordination of technician scheduling and overtime management\n\nAYESAŞ | Production Planning and Control Intern | August 2024 - September 2024 | ANKARA\n\nAnalysis of process analysis and improvement methods; proposed solutions to issues affecting production quality.\nOrder-driven work study planning and lean manufacturing practices.\nOptimization of bottlenecks through overtime scheduling"
-  },
-  {
-    "objectID": "about.html#projects",
-    "href": "about.html#projects",
-    "title": "About Me",
-    "section": "",
-    "text": "TOC & DES Based Simulation Model | MITAS GROUP | October 2025 – February 2025 | ANKARA\n\nA term-end project aimed at developing a TOC- and DES-based simulation model to perform production line capacity analysis, identify the primary bottleneck, and generate improvement alternatives for capacity expansion through scenario analysis.\n\nRough Cut Capacity Analysis | PETLAS | February 2025 – July 2025 | KIRŞEHİR\n\nRough Capacity Planning (RCCP) for Tire Types: A Term Project.\nCapacity planning analysis and development of an Excel macro-based algorithm to improve\n\nDatabase Management Systems | HACETTEPE UNIVERSITY | February 2025 – July 2025 | ANKARA\n\nA MySQL database project that enhances the planning efficiency of academic staff by preventing exam schedule conflicts.\n\nReduction In Lost Shipments | ARAS KARGO | September 2024 – January 2024 | ANKARA\n\nA lean manufacturing project aimed at reducing lost shipments and improving warehouse efficiency.\n\nArat | TALAY ROBOTICS SYSTEMS | November 2020 – January 2021 | ANKARA\n\nTeknofest Preliminary Design Report (15th), Critical Design Report (5th)."
-  },
-  {
-    "objectID": "about.html#competencies",
-    "href": "about.html#competencies",
-    "title": "About Me",
-    "section": "",
-    "text": "R, Quarto, Git, Python, SAP, MySQL, Excel-VBA"
-  },
-  {
-    "objectID": "about.html#hobbies",
-    "href": "about.html#hobbies",
-    "title": "About Me",
-    "section": "",
-    "text": "Boxing\nTennis\nRiding"
-  },
-  {
-    "objectID": "about.html#cv",
-    "href": "about.html#cv",
-    "title": "About Me",
-    "section": "",
-    "text": "Click here to view my CV"
+    "text": "On this page, I showcase the assignment I conducted for the [term and year, e.g. Spring 2026] EMU430 Data Analytics course.\nPlease use the left menu to navigate through my assignments.\nThe most recent update to this page was made on 15/03/2026.\n\n\n\n Back to top",
+    "crumbs": [
+      "My Assignments"
+    ]
   },
   {
     "objectID": "assignments/assignment-1.html",
@@ -103,20 +77,17 @@
     ]
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "My Assignments",
-    "section": "",
-    "text": "On this page, I showcase the assignment I conducted for the [term and year, e.g. Spring 2026] EMU430 Data Analytics course.\nPlease use the left menu to navigate through my assignments.\nThe most recent update to this page was made on 15/03/2026.\n\n\n\n Back to top",
-    "crumbs": [
-      "My Assignments"
-    ]
-  },
-  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kerem Berkalp Çerekçi",
+    "section": "",
+    "text": "Hello! My name is Kerem Berkalp Çerekçi.\nThis is my personal webpage.\nI am a student at Hacettepe University. This is my personal webpage for EMU430.\n\n\n\n Back to top"
   }
 ]
