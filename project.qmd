@@ -3,10 +3,10 @@ title: "Our Course Project"
 sidebar: false 
 ---
 
-I'm honored to be a member of the \[group name\] project team.
+I'm honored to be a member of the **SmartSpend** project team.
 
-Below, you'll find a brief summary of our project. To access a detailed project description, please go to [https://\[your-project-url\]](#0){.uri}.
+Below, you'll find a brief summary of our project. To access a detailed project description, please go to [SmartSpend Project Website](https://emu-hacettepe-analytics.github.io/emu430-fall2024-team-smartspend/).
 
 **Summary**
 
-\[provide a biref summary of your project\]
+SmartSpend investigates the relationship between squad market values and points performance in the Turkish Super Lig across three seasons (2023-24, 2024-25, 2025-26). We analyzed which clubs get the most points per Euro spent using OLS regression and efficiency scores. Key findings: budget strongly predicts points (r = 0.855), Galatasaray is the most efficient large-budget club, and mid-table clubs like Sivasspor consistently over-perform their budgets.
