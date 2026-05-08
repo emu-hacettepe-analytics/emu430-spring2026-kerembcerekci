@@ -34,7 +34,7 @@
     "href": "project.html",
     "title": "Our Course Project",
     "section": "",
-    "text": "I’m honored to be a member of the [group name] project team.\nBelow, you’ll find a brief summary of our project. To access a detailed project description, please go to https://[your-project-url].\nSummary\n[provide a biref summary of your project]\n\n\n\n Back to top"
+    "text": "I’m honored to be a member of the SmartSpend project team.\nBelow, you’ll find a brief summary of our project. To access a detailed project description, please go to SmartSpend Project Website.\nSummary\nSmartSpend investigates the relationship between squad market values and points performance in the Turkish Super Lig across three seasons (2023-24, 2024-25, 2025-26). We analyzed which clubs get the most points per Euro spent using OLS regression and efficiency scores. Key findings: budget strongly predicts points (r = 0.855), Galatasaray is the most efficient large-budget club, and mid-table clubs like Sivasspor consistently over-perform their budgets.\n\n\n\n Back to top"
   },
   {
     "objectID": "assignments.html",
@@ -89,5 +89,75 @@
     "title": "Kerem Berkalp Çerekçi",
     "section": "",
     "text": "Hello! My name is Kerem Berkalp Çerekçi.\nThis is my personal webpage.\nI am a student at Hacettepe University. This is my personal webpage for EMU430.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AGENTS.html",
+    "href": "AGENTS.html",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "This is a personal academic website for EMU430 Data Analytics course, built with Quarto. The site contains course assignments, a project page, and personal information for Kerem Berkalp Çerekçi.\n\n\n\n\n\nquarto preview\nRuns a live preview server at http://localhost:4200 with hot reloading.\n\n\n\nquarto render\nRenders all .qmd files to HTML in the docs/ directory.\n\n\n\nquarto render path/to/file.qmd\nExample: quarto render assignments/assignment-1.qmd\n\n\n\nquarto check\nValidates the project configuration and checks for issues.\n\n\n\nquarto render --to pdf    # Render to PDF\nquarto render --to docx   # Render to Word\n\n\n\nquarto preview --clean   # Clean before preview\nrm -rf docs/_freeze/      # Remove cached outputs\n\n\n\n\n\n\n\nWrite clear, well-organized content with proper Markdown formatting\nUse semantic heading hierarchy (H1 for titles, H2 for main sections, H3+ for subsections)\nKeep code chunks focused and well-commented\n\n\n\n\nEvery .qmd file should include YAML front matter:\n---\ntitle: \"Page Title\"\n---\n\n\n\n\nAlways label code chunks with descriptive names when they serve a specific purpose\nUse proper R coding conventions (spacing, naming with underscores)\nInclude comments for non-obvious operations\n\nExample:\n# Good\nmean_value &lt;- mean(data$column, na.rm = TRUE)\n\n# Include AI assistance notes for significant contributions\n# [AI prompt used: \"...\"]\n\n\n\n\nUse lowercase with hyphens for filenames: assignment-1.qmd, my-post.qmd\nAvoid special characters and spaces\nDirectory names should be lowercase: assignments/, posts/\n\n\n\n\n\nAcademic writing tone for assignments\nPersonal but professional for about/posts pages\nUse proper Turkish diacritics (ç, ı, ö, ş, ü, ğ) in Turkish content\nUse proper English punctuation in English content\n\n\n\n\n\nUse **bold** for emphasis and important terms\nUse proper bullet points with - or *\nInclude line breaks between sections for readability\n\n\n\n\n\n.\n├── _quarto.yml          # Quarto website configuration\n├── index.qmd            # Home page\n├── about.qmd            # About page\n├── posts.qmd            # Blog posts listing\n├── assignments.qmd      # Assignments listing\n├── assignments/\n│   ├── assignment-1.qmd\n│   └── assignment-2.qmd\n├── project.qmd          # Course project page\n├── styles.css           # Custom CSS styles\n├── docs/                # Rendered HTML output (published to GitHub Pages)\n└── .quarto/             # Quarto cache/build artifacts\n\n\n\n\n\n\nCreate file: assignments/assignment-N.qmd\nAdd front matter with title\nWrite content with embedded R code\nRun quarto render assignments/assignment-N.qmd to preview\nThe assignment listing will automatically update in assignments.qmd\n\n\n\n\n\nCreate file in posts/ directory: posts/my-post.qmd\nAdd front matter with title and date\nWrite content\nRun quarto render posts/my-post.qmd to preview\n\n\n\n\n\nThe _quarto.yml file controls: - Website title and navigation - Sidebar structure and search - Theme (light: pulse, dark: superhero) - Output directory (docs/ for GitHub Pages) - Table of contents settings\n\n\n\nThe docs/ directory is published via GitHub Pages. After rendering:\ngit add docs/\ngit commit -m \"Update site content\"\ngit push\n\n\n\n\nDo not edit files in docs/ directly - they are generated\nDo not edit files in .quarto/ directory - these are cache files\nThe _site/ directory is for local preview only, do not commit\nAlways run quarto render before committing to ensure HTML is up to date\n\n\n\n\nThe editor: visual setting in _quarto.yml enables the visual editor in Quarto. For text-based editing, you can set it to source."
+  },
+  {
+    "objectID": "AGENTS.html#project-overview",
+    "href": "AGENTS.html#project-overview",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "This is a personal academic website for EMU430 Data Analytics course, built with Quarto. The site contains course assignments, a project page, and personal information for Kerem Berkalp Çerekçi."
+  },
+  {
+    "objectID": "AGENTS.html#build-commands",
+    "href": "AGENTS.html#build-commands",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "quarto preview\nRuns a live preview server at http://localhost:4200 with hot reloading.\n\n\n\nquarto render\nRenders all .qmd files to HTML in the docs/ directory.\n\n\n\nquarto render path/to/file.qmd\nExample: quarto render assignments/assignment-1.qmd\n\n\n\nquarto check\nValidates the project configuration and checks for issues.\n\n\n\nquarto render --to pdf    # Render to PDF\nquarto render --to docx   # Render to Word\n\n\n\nquarto preview --clean   # Clean before preview\nrm -rf docs/_freeze/      # Remove cached outputs"
+  },
+  {
+    "objectID": "AGENTS.html#code-style-guidelines",
+    "href": "AGENTS.html#code-style-guidelines",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "Write clear, well-organized content with proper Markdown formatting\nUse semantic heading hierarchy (H1 for titles, H2 for main sections, H3+ for subsections)\nKeep code chunks focused and well-commented\n\n\n\n\nEvery .qmd file should include YAML front matter:\n---\ntitle: \"Page Title\"\n---\n\n\n\n\nAlways label code chunks with descriptive names when they serve a specific purpose\nUse proper R coding conventions (spacing, naming with underscores)\nInclude comments for non-obvious operations\n\nExample:\n# Good\nmean_value &lt;- mean(data$column, na.rm = TRUE)\n\n# Include AI assistance notes for significant contributions\n# [AI prompt used: \"...\"]\n\n\n\n\nUse lowercase with hyphens for filenames: assignment-1.qmd, my-post.qmd\nAvoid special characters and spaces\nDirectory names should be lowercase: assignments/, posts/\n\n\n\n\n\nAcademic writing tone for assignments\nPersonal but professional for about/posts pages\nUse proper Turkish diacritics (ç, ı, ö, ş, ü, ğ) in Turkish content\nUse proper English punctuation in English content\n\n\n\n\n\nUse **bold** for emphasis and important terms\nUse proper bullet points with - or *\nInclude line breaks between sections for readability"
+  },
+  {
+    "objectID": "AGENTS.html#project-structure",
+    "href": "AGENTS.html#project-structure",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": ".\n├── _quarto.yml          # Quarto website configuration\n├── index.qmd            # Home page\n├── about.qmd            # About page\n├── posts.qmd            # Blog posts listing\n├── assignments.qmd      # Assignments listing\n├── assignments/\n│   ├── assignment-1.qmd\n│   └── assignment-2.qmd\n├── project.qmd          # Course project page\n├── styles.css           # Custom CSS styles\n├── docs/                # Rendered HTML output (published to GitHub Pages)\n└── .quarto/             # Quarto cache/build artifacts"
+  },
+  {
+    "objectID": "AGENTS.html#workflow-for-adding-content",
+    "href": "AGENTS.html#workflow-for-adding-content",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "Create file: assignments/assignment-N.qmd\nAdd front matter with title\nWrite content with embedded R code\nRun quarto render assignments/assignment-N.qmd to preview\nThe assignment listing will automatically update in assignments.qmd\n\n\n\n\n\nCreate file in posts/ directory: posts/my-post.qmd\nAdd front matter with title and date\nWrite content\nRun quarto render posts/my-post.qmd to preview"
+  },
+  {
+    "objectID": "AGENTS.html#configuration-reference",
+    "href": "AGENTS.html#configuration-reference",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "The _quarto.yml file controls: - Website title and navigation - Sidebar structure and search - Theme (light: pulse, dark: superhero) - Output directory (docs/ for GitHub Pages) - Table of contents settings"
+  },
+  {
+    "objectID": "AGENTS.html#github-pages-deployment",
+    "href": "AGENTS.html#github-pages-deployment",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "The docs/ directory is published via GitHub Pages. After rendering:\ngit add docs/\ngit commit -m \"Update site content\"\ngit push"
+  },
+  {
+    "objectID": "AGENTS.html#important-notes",
+    "href": "AGENTS.html#important-notes",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "Do not edit files in docs/ directly - they are generated\nDo not edit files in .quarto/ directory - these are cache files\nThe _site/ directory is for local preview only, do not commit\nAlways run quarto render before committing to ensure HTML is up to date"
+  },
+  {
+    "objectID": "AGENTS.html#editor-settings",
+    "href": "AGENTS.html#editor-settings",
+    "title": "Agent Guidelines for EMU430 Quarto Website",
+    "section": "",
+    "text": "The editor: visual setting in _quarto.yml enables the visual editor in Quarto. For text-based editing, you can set it to source."
   }
 ]

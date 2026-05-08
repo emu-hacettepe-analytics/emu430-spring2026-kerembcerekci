@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Our Course Project – [Kerem Berkalp Çerekçi]’s Analytics Lab</title>
+<title>agents – [Kerem Berkalp Çerekçi]'s Analytics Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -131,40 +165,216 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#agent-guidelines-for-emu430-quarto-website" id="toc-agent-guidelines-for-emu430-quarto-website" class="nav-link active" data-scroll-target="#agent-guidelines-for-emu430-quarto-website">Agent Guidelines for EMU430 Quarto Website</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#build-commands" id="toc-build-commands" class="nav-link" data-scroll-target="#build-commands">Build Commands</a>
+  <ul class="collapse">
+  <li><a href="#preview-site-locally" id="toc-preview-site-locally" class="nav-link" data-scroll-target="#preview-site-locally">Preview Site Locally</a></li>
+  <li><a href="#render-all-documents" id="toc-render-all-documents" class="nav-link" data-scroll-target="#render-all-documents">Render All Documents</a></li>
+  <li><a href="#render-a-single-file" id="toc-render-a-single-file" class="nav-link" data-scroll-target="#render-a-single-file">Render a Single File</a></li>
+  <li><a href="#check-document" id="toc-check-document" class="nav-link" data-scroll-target="#check-document">Check Document</a></li>
+  <li><a href="#render-to-specific-format" id="toc-render-to-specific-format" class="nav-link" data-scroll-target="#render-to-specific-format">Render to Specific Format</a></li>
+  <li><a href="#clean-build-artifacts" id="toc-clean-build-artifacts" class="nav-link" data-scroll-target="#clean-build-artifacts">Clean Build Artifacts</a></li>
+  </ul></li>
+  <li><a href="#code-style-guidelines" id="toc-code-style-guidelines" class="nav-link" data-scroll-target="#code-style-guidelines">Code Style Guidelines</a>
+  <ul class="collapse">
+  <li><a href="#general-principles" id="toc-general-principles" class="nav-link" data-scroll-target="#general-principles">General Principles</a></li>
+  <li><a href="#quarto-document-structure" id="toc-quarto-document-structure" class="nav-link" data-scroll-target="#quarto-document-structure">Quarto Document Structure</a></li>
+  <li><a href="#r-code-chunks" id="toc-r-code-chunks" class="nav-link" data-scroll-target="#r-code-chunks">R Code Chunks</a></li>
+  <li><a href="#file-naming-conventions" id="toc-file-naming-conventions" class="nav-link" data-scroll-target="#file-naming-conventions">File Naming Conventions</a></li>
+  <li><a href="#content-style" id="toc-content-style" class="nav-link" data-scroll-target="#content-style">Content Style</a></li>
+  <li><a href="#formatting" id="toc-formatting" class="nav-link" data-scroll-target="#formatting">Formatting</a></li>
+  </ul></li>
+  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
+  <li><a href="#workflow-for-adding-content" id="toc-workflow-for-adding-content" class="nav-link" data-scroll-target="#workflow-for-adding-content">Workflow for Adding Content</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-new-assignment" id="toc-creating-a-new-assignment" class="nav-link" data-scroll-target="#creating-a-new-assignment">Creating a New Assignment</a></li>
+  <li><a href="#creating-a-new-post" id="toc-creating-a-new-post" class="nav-link" data-scroll-target="#creating-a-new-post">Creating a New Post</a></li>
+  </ul></li>
+  <li><a href="#configuration-reference" id="toc-configuration-reference" class="nav-link" data-scroll-target="#configuration-reference">Configuration Reference</a></li>
+  <li><a href="#github-pages-deployment" id="toc-github-pages-deployment" class="nav-link" data-scroll-target="#github-pages-deployment">GitHub Pages Deployment</a></li>
+  <li><a href="#important-notes" id="toc-important-notes" class="nav-link" data-scroll-target="#important-notes">Important Notes</a></li>
+  <li><a href="#editor-settings" id="toc-editor-settings" class="nav-link" data-scroll-target="#editor-settings">Editor Settings</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Our Course Project</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
+<section id="agent-guidelines-for-emu430-quarto-website" class="level1">
+<h1>Agent Guidelines for EMU430 Quarto Website</h1>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This is a personal academic website for EMU430 Data Analytics course, built with <a href="https://quarto.org/">Quarto</a>. The site contains course assignments, a project page, and personal information for Kerem Berkalp Çerekçi.</p>
+</section>
+<section id="build-commands" class="level2">
+<h2 class="anchored" data-anchor-id="build-commands">Build Commands</h2>
+<section id="preview-site-locally" class="level3">
+<h3 class="anchored" data-anchor-id="preview-site-locally">Preview Site Locally</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Runs a live preview server at <code>http://localhost:4200</code> with hot reloading.</p>
+</section>
+<section id="render-all-documents" class="level3">
+<h3 class="anchored" data-anchor-id="render-all-documents">Render All Documents</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Renders all <code>.qmd</code> files to HTML in the <code>docs/</code> directory.</p>
+</section>
+<section id="render-a-single-file" class="level3">
+<h3 class="anchored" data-anchor-id="render-a-single-file">Render a Single File</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render path/to/file.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example: <code>quarto render assignments/assignment-1.qmd</code></p>
+</section>
+<section id="check-document" class="level3">
+<h3 class="anchored" data-anchor-id="check-document">Check Document</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Validates the project configuration and checks for issues.</p>
+</section>
+<section id="render-to-specific-format" class="level3">
+<h3 class="anchored" data-anchor-id="render-to-specific-format">Render to Specific Format</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render <span class="at">--to</span> pdf    <span class="co"># Render to PDF</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render <span class="at">--to</span> docx   <span class="co"># Render to Word</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="clean-build-artifacts" class="level3">
+<h3 class="anchored" data-anchor-id="clean-build-artifacts">Clean Build Artifacts</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview <span class="at">--clean</span>   <span class="co"># Clean before preview</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> docs/_freeze/      <span class="co"># Remove cached outputs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="code-style-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="code-style-guidelines">Code Style Guidelines</h2>
+<section id="general-principles" class="level3">
+<h3 class="anchored" data-anchor-id="general-principles">General Principles</h3>
+<ul>
+<li>Write clear, well-organized content with proper Markdown formatting</li>
+<li>Use semantic heading hierarchy (H1 for titles, H2 for main sections, H3+ for subsections)</li>
+<li>Keep code chunks focused and well-commented</li>
+</ul>
+</section>
+<section id="quarto-document-structure" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-document-structure">Quarto Document Structure</h3>
+<p>Every <code>.qmd</code> file should include YAML front matter:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Page Title"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="r-code-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="r-code-chunks">R Code Chunks</h3>
+<ul>
+<li>Always label code chunks with descriptive names when they serve a specific purpose</li>
+<li>Use proper R coding conventions (spacing, naming with underscores)</li>
+<li>Include comments for non-obvious operations</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mean_value <span class="ot">&lt;-</span> <span class="fu">mean</span>(data<span class="sc">$</span>column, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Include AI assistance notes for significant contributions</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># [AI prompt used: "..."]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="file-naming-conventions" class="level3">
+<h3 class="anchored" data-anchor-id="file-naming-conventions">File Naming Conventions</h3>
+<ul>
+<li>Use lowercase with hyphens for filenames: <code>assignment-1.qmd</code>, <code>my-post.qmd</code></li>
+<li>Avoid special characters and spaces</li>
+<li>Directory names should be lowercase: <code>assignments/</code>, <code>posts/</code></li>
+</ul>
+</section>
+<section id="content-style" class="level3">
+<h3 class="anchored" data-anchor-id="content-style">Content Style</h3>
+<ul>
+<li>Academic writing tone for assignments</li>
+<li>Personal but professional for about/posts pages</li>
+<li>Use proper Turkish diacritics (ç, ı, ö, ş, ü, ğ) in Turkish content</li>
+<li>Use proper English punctuation in English content</li>
+</ul>
+</section>
+<section id="formatting" class="level3">
+<h3 class="anchored" data-anchor-id="formatting">Formatting</h3>
+<ul>
+<li>Use <code>**bold**</code> for emphasis and important terms</li>
+<li>Use proper bullet points with <code>-</code> or <code>*</code></li>
+<li>Include line breaks between sections for readability</li>
+</ul>
+</section>
+</section>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<pre><code>.
+├── _quarto.yml          # Quarto website configuration
+├── index.qmd            # Home page
+├── about.qmd            # About page
+├── posts.qmd            # Blog posts listing
+├── assignments.qmd      # Assignments listing
+├── assignments/
+│   ├── assignment-1.qmd
+│   └── assignment-2.qmd
+├── project.qmd          # Course project page
+├── styles.css           # Custom CSS styles
+├── docs/                # Rendered HTML output (published to GitHub Pages)
+└── .quarto/             # Quarto cache/build artifacts</code></pre>
+</section>
+<section id="workflow-for-adding-content" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-for-adding-content">Workflow for Adding Content</h2>
+<section id="creating-a-new-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-new-assignment">Creating a New Assignment</h3>
+<ol type="1">
+<li>Create file: <code>assignments/assignment-N.qmd</code></li>
+<li>Add front matter with title</li>
+<li>Write content with embedded R code</li>
+<li>Run <code>quarto render assignments/assignment-N.qmd</code> to preview</li>
+<li>The assignment listing will automatically update in <code>assignments.qmd</code></li>
+</ol>
+</section>
+<section id="creating-a-new-post" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-new-post">Creating a New Post</h3>
+<ol type="1">
+<li>Create file in <code>posts/</code> directory: <code>posts/my-post.qmd</code></li>
+<li>Add front matter with title and date</li>
+<li>Write content</li>
+<li>Run <code>quarto render posts/my-post.qmd</code> to preview</li>
+</ol>
+</section>
+</section>
+<section id="configuration-reference" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-reference">Configuration Reference</h2>
+<p>The <code>_quarto.yml</code> file controls: - Website title and navigation - Sidebar structure and search - Theme (light: pulse, dark: superhero) - Output directory (<code>docs/</code> for GitHub Pages) - Table of contents settings</p>
+</section>
+<section id="github-pages-deployment" class="level2">
+<h2 class="anchored" data-anchor-id="github-pages-deployment">GitHub Pages Deployment</h2>
+<p>The <code>docs/</code> directory is published via GitHub Pages. After rendering:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add docs/</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update site content"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="important-notes" class="level2">
+<h2 class="anchored" data-anchor-id="important-notes">Important Notes</h2>
+<ul>
+<li>Do not edit files in <code>docs/</code> directly - they are generated</li>
+<li>Do not edit files in <code>.quarto/</code> directory - these are cache files</li>
+<li>The <code>_site/</code> directory is for local preview only, do not commit</li>
+<li>Always run <code>quarto render</code> before committing to ensure HTML is up to date</li>
+</ul>
+</section>
+<section id="editor-settings" class="level2">
+<h2 class="anchored" data-anchor-id="editor-settings">Editor Settings</h2>
+<p>The <code>editor: visual</code> setting in <code>_quarto.yml</code> enables the visual editor in Quarto. For text-based editing, you can set it to <code>source</code>.</p>
 
 
-</header>
-
-
-<p>I’m honored to be a member of the <strong>SmartSpend</strong> project team.</p>
-<p>Below, you’ll find a brief summary of our project. To access a detailed project description, please go to <a href="https://emu-hacettepe-analytics.github.io/emu430-fall2024-team-smartspend/">SmartSpend Project Website</a>.</p>
-<p><strong>Summary</strong></p>
-<p>SmartSpend investigates the relationship between squad market values and points performance in the Turkish Super Lig across three seasons (2023-24, 2024-25, 2025-26). We analyzed which clubs get the most points per Euro spent using OLS regression and efficiency scores. Key findings: budget strongly predicts points (r = 0.855), Galatasaray is the most efficient large-budget club, and mid-table clubs like Sivasspor consistently over-perform their budgets.</p>
-
-
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
